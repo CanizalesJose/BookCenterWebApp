@@ -1,0 +1,22 @@
+<nav class="custom-nav">
+    <div class="nav-wrapper brown lighten-2">
+        <a href="/" class="brand-logo center">
+            <img src="/logo.png">
+        </a>
+        <a href="#!" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <!-- Lista con los apartados de la página -->
+            <li class="hoverable <% if(activePage == "home") {%> active <% } %>"><a href="/">Inicio</a></li>
+            <li class="hoverable <% if(activePage == "catalog") {%> active <% } %>"><a href="#">Catalogo</a></li>
+            <li class="hoverable <% if(activePage == "about") {%> active <% } %>"><a href="#">Acerca de...</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="#">Catalogo</a></li>
+    <li><a href="#">Acerca de...</a></li>
+</ul>
