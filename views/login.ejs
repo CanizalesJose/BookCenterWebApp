@@ -7,10 +7,58 @@
 <body>
     <%- include('./partials/header.ejs') %>
     
+    <!-- Crear un contenedor alineado al centro -->
     <div class="valign-wrapper loginContainer">
-        asd
+        <div class="container center-align brown">
+
+            <!-- Generar un renglon centrado -->
+            <div class="row center">
+                <!-- Espacio en blanco de dos columnas para margen -->
+                <div class="col s2"></div>
+
+
+                <!-- Formulario en el centro -->
+                <form class="col s8" action="/api/login" method="post">
+                    <!-- Margen superior del formulario -->
+                    <div class="row"><br></div>
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input placeholder="Username" id="loginUsername" type="text" class="validate" data-length="30">
+                            <label for="loginUsername">Username</label>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input placeholder="Password" id="loginPassword" type="password" class="validate" data-length="16">
+                            <label for="loginPassword">Password</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">
+                                Iniciar Sesión
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Margen inferior del formulario -->
+                    <div class="row"><br></div>
+                </form>
+
+
+                <div class="col s2"></div>
+
+            </div>
+        </div>
     </div>
 
     <%- include('./partials/jsLink.ejs') %>
+
 </body>
 </html>
