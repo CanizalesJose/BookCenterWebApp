@@ -19,7 +19,7 @@ app.use('/', appRoutes);
 app.use('/api', apiRoutes);
 // Usar una ruta por defecto cuando hayan errores
 app.use((req, res, next) => {
-  res.status(404).render("404");
+  res.status(404).render("404", {user:'', activePage:''});
 });
 
 // Iniciar el servidor
