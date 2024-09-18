@@ -30,3 +30,11 @@ main {
   height: 100%;
   position: absolute;
 }
+.loginContainer .container {
+  width: 50%;
+  height: 70%;
+}
+
+.input-field .helper-text {
+  display: block !important;
+}
