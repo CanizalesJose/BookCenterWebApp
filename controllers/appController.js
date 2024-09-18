@@ -8,6 +8,6 @@ exports.renderHomePage = (req, res) => {
 exports.renderLogin = (req, res) => {
   console.log(`${req.method} on route ${req.path}`);
   res.render('login',{
-    activePage: "login", user:'eso'
+    activePage: "login"
   });
 }
