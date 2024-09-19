@@ -12,15 +12,19 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Servir archivos estáticos (CSS, JS, imágenes) desde la carpeta 'public'
 app.use(express.static('public'));
+// Middleware para procesar cuerpo de peticiones
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Usar las rutas para la aplicación web
 app.use('/', appRoutes);
 // Usar las rutas para las peticiones a la API
 app.use('/api', apiRoutes);
-// Usar una ruta por defecto cuando hayan errores
+// Middleware para procesar peticiones a direcciones desconocidas
 app.use((req, res, next) => {
   res.status(404).render("404", {activePage:''});
 });
+
 
 // Iniciar el servidor
 const port = 3000;
